@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EID MUBARAK DEAR FRIEND ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <style>
+        body {
+            background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmndn5rY6lsKgvEGe-g_m8UhV9TBGTN3Kc_OmOKdrsv9Av_vPoTrgOOEsuLDAiv9kDo70sBd-Yc4AzTN4fhaS18wGCgbhIsxaPucPTDoK-BvpI7DWW7oCbLKjd3mphy-3LsVec_kbMgx6R8qe9F7dse58dK4myDDdrpTzze5tbEwsbRud5EFgqd57lRWJ3/s1308/1000320578.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: 'Handlee', cursive;
+            position: relative;
+        }
+
+        #message-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            display: none;
+            line-height: 1.5;
+            height: 50vh; 
+            overflow-y: auto;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .big-button {
+            font-size: 30px;
+            padding: 15px 40px;
+            border-radius: 20px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 100px auto;
+            line-height: 1.3;
+        }
+
+        .big-button:hover {
+            background: #e68900;
+        }
+
+        .overlay p {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .gift-box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            animation: giftAnimation 2s forwards;
+            display: none;
+        }
+
+        .gift-box .gift-text {
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .letter {
+            display: none;
+            color: #ff9800;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: letterAnimation 1s forwards;
+            white-space: nowrap;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        @keyframes giftAnimation {
+            0% { width: 100px; height: 100px; background: red; }
+            50% { width: 150px; height: 150px; background: yellow; }
+            100% { width: 0; height: 0; opacity: 0; }
+        }
+
+        @keyframes letterAnimation {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="cover">
+            <p>🎁 Sir, This is for you! 🎁</p>
+            <button id="open" class="big-button">
+                <span style="display: block">🎁 EID 🎁</span>
+                <span style="display: block">🎁 MUBARAK! 🎁</span>
+            </button>
+        </div>
+    </div>
+    <audio src="https://c.top4top.io/m_33482y7b60.mp3" id="linkmp3"></audio>
+    <div id="message-box">
+        <p id="typing-text"></p>
+    </div>
+
+    <div id="gift-box" class="gift-box">
+        <div class="gift-text">🎁</div>
+    </div>
+    <div id="letter" class="letter">❤️ Assalamu alaikum, Sir ! ❤️</div>
+
+    <div class="copyright">Copyright © 2025. JIHAD FOKIR . All rights reserved.</div>
+
+    <script>
+        document.getElementById("open").addEventListener("click", function() {
+            // Hide the overlay and show message box
+            document.querySelector(".overlay").style.display = "none";
+
+            // Show gift box animation
+            const giftBox = document.getElementById("gift-box");
+            giftBox.style.display = "block";
+
+            // After gift box animation, show the letter
+            setTimeout(function() {
+                giftBox.style.display = "none";
+                const letter = document.getElementById("letter");
+                letter.style.display = "block";
+
+                // Hide the letter after 2 seconds and start the text animation
+                setTimeout(function() {
+                    letter.style.display = "none";
+                    const messageBox = document.getElementById("message-box");
+                    messageBox.style.display = "block";
+                    document.getElementById("linkmp3").play();
+
+                    const typeEffect = new TypeIt("#typing-text", {
+                        speed: 50,
+                        cursor: false,
+                        waitUntilVisible: true,
+                        afterStep: function() {
+                            // Auto-scroll to bottom after each typing step
+                            messageBox.scrollTop = messageBox.scrollHeight;
+                        }
+                    })
+                    .type("✨ প্রিয় স্যার, ঈদের অগ্রিম শুভেচ্ছা ও আন্তরিক শুভকামনা জানাচ্ছি! 🌙✨")
+                    .break()
+                    .type("এই পবিত্র ঈদ আপনার জীবনে নিয়ে আসুক অফুরন্ত সুখ, অগাধ শান্তি আর আল্লাহর বিশেষ রহমত।")
+                    .break()
+                    .type("আপনার মূল্যবান শিক্ষা, দিকনির্দেশনা এবং আন্তরিক প্রচেষ্টা আমাদের জীবনকে আলোকিত করে চলেছে যেন এক অনির্বাণ মশালের মতো।")
+                    .break()
+                    .type("এই মহিমান্বিত উপলক্ষ্যে, আমি আল্লার দরবারে ফরিয়াদ করি, তিনি যেন আপনাকে সুস্থতা, দীর্ঘায়ু, আত্মিক তৃপ্তি এবং পৃথিবীর সমস্ত সাফল্যে ভরিয়ে দেন।")
+                    .break()
+                    .type("আপনার প্রতিটি দিন হোক সফলতা ও আনন্দে পরিপূর্ণ, আপনার জ্ঞানের আলো যেন আমাদের পথ আরও প্রসারিত করে।")
+                    .break()
+                    .type("এই ঈদ হোক সমস্ত অন্ধকার দূর করে আত্মার শুদ্ধি ও প্রকৃত প্রশান্তির সন্ধান। ঈদ মোবারক! 🌙🤲")
+                    .go();
+                }, 2000);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
